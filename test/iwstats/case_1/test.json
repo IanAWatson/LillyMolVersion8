@@ -1,0 +1,4 @@
+{
+    "executable": "iwstats",
+    "args": [ "-j -e 2 -p 3 ${LILLYMOL_HOME}/data/descriptor.txt"]
+}

@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+import "Molecule_Lib/substructure.proto";
+
+package ToggleKekuleForm;
+
+message KekuleBond {
+  optional int32 a1 = 1;
+  optional int32 a2 = 2;
+  optional SubstructureSearch.BondType btype = 3;
+}
+
+message ToggleKekuleForm {
+  repeated KekuleBond bond = 1;
+
+  optional bool allow_pyrrole_to_change = 2;
+
+  optional bool display_error_messages = 3;
+
+  optional bool unset_unnecessary_implicit_hydrogens_known_values = 4;
+
+  optional bool check_all_bonds_aromatic = 5;
+}

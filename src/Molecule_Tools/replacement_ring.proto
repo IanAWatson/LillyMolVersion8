@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package RplRing;
+
+message ReplacementRing {
+  // The replacement ring expressed as smiles.
+  optional string smi = 1;   // required
+
+  // The replacement ring expressed as smarts.
+  // Must have same atom order as `smi`.
+  optional string smt = 2;   // required
+
+  // The name of the first exemplar of this ring.
+  // Suggest using msort to sort the input by heavy atom count.
+  optional string id = 3;
+
+  // What kind of ring system this is.
+  optional string label = 4;
+
+  // The number of exemplars.
+  optional uint32 n = 5;
+
+  // Whether there are connections marked in the smiles.
+  optional bool conn = 6;
+
+  // Exocyclic atoms that are needed in order to make the ring
+  // aromatic are problematic. If we put them in the smarts,
+  // then the smarts will not match a simpler ring.
+  // In what is kind of a kludge, we add exocyclic doubly
+  // bonded atoms as a separate smiles, consisting of isotopically
+  // labelled atoms. The same isotope will have been applied to the
+  // corresponding ring atom, and that is how they are rejoined.
+  optional string exo = 7;
+
+  // the unique smiles is not needed for processing, but needed for aggregating
+  // results across different collections.
+  optional string usmi = 8;
+}

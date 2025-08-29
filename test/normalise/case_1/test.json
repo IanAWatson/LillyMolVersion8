@@ -1,0 +1,3 @@
+{
+  "args": ["-i 1 -j ${LILLYMOL_HOME}/data/descriptor.txt"]
+}

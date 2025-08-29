@@ -1,0 +1,68 @@
+description {
+  feature_name: "w_brunsneg"
+  description: "Number of negatively charged atoms, Bruns"
+  plot_title: "Number of negatively charged atoms, Bruns"
+  line_color: "blue"
+  source: "chembl"
+}
+maxval: 8.0
+mean: 0.12460574
+quantile {
+  quantile: 0.01
+}
+quantile {
+  quantile: 0.05
+}
+quantile {
+  quantile: 0.1
+}
+quantile {
+  quantile: 0.5
+}
+quantile {
+  quantile: 0.9
+  value: 1.0
+}
+quantile {
+  quantile: 0.95
+  value: 1.0
+}
+quantile {
+  quantile: 0.99
+  value: 2.0
+}
+int_values {
+  count: 1645760
+}
+int_values {
+  value: 1
+  count: 178716
+}
+int_values {
+  value: 2
+  count: 20087
+}
+int_values {
+  value: 3
+  count: 2799
+}
+int_values {
+  value: 4
+  count: 547
+}
+int_values {
+  value: 5
+  count: 119
+}
+int_values {
+  value: 6
+  count: 25
+}
+int_values {
+  value: 7
+  count: 5
+}
+int_values {
+  value: 8
+  count: 3
+}

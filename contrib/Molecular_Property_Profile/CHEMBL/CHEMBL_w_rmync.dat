@@ -1,0 +1,231 @@
+description {
+  feature_name: "w_rmync"
+  description: "Number of Carbon atoms"
+  plot_title: "Number of Carbon atoms"
+  line_color: "blue"
+  source: "chembl"
+}
+minval: 1.0
+maxval: 48.0
+mean: 20.551474
+median: 20.0
+quantile {
+  quantile: 0.01
+  value: 7.0
+}
+quantile {
+  quantile: 0.05
+  value: 11.0
+}
+quantile {
+  quantile: 0.1
+  value: 13.0
+}
+quantile {
+  quantile: 0.5
+  value: 20.0
+}
+quantile {
+  quantile: 0.9
+  value: 29.0
+}
+quantile {
+  quantile: 0.95
+  value: 31.0
+}
+quantile {
+  quantile: 0.99
+  value: 37.0
+}
+int_values {
+  value: 1
+  count: 72
+}
+int_values {
+  value: 2
+  count: 308
+}
+int_values {
+  value: 3
+  count: 795
+}
+int_values {
+  value: 4
+  count: 1768
+}
+int_values {
+  value: 5
+  count: 2772
+}
+int_values {
+  value: 6
+  count: 5566
+}
+int_values {
+  value: 7
+  count: 7387
+}
+int_values {
+  value: 8
+  count: 11565
+}
+int_values {
+  value: 9
+  count: 17386
+}
+int_values {
+  value: 10
+  count: 26565
+}
+int_values {
+  value: 11
+  count: 33066
+}
+int_values {
+  value: 12
+  count: 44184
+}
+int_values {
+  value: 13
+  count: 55690
+}
+int_values {
+  value: 14
+  count: 71570
+}
+int_values {
+  value: 15
+  count: 89659
+}
+int_values {
+  value: 16
+  count: 104935
+}
+int_values {
+  value: 17
+  count: 117222
+}
+int_values {
+  value: 18
+  count: 125430
+}
+int_values {
+  value: 19
+  count: 127225
+}
+int_values {
+  value: 20
+  count: 128618
+}
+int_values {
+  value: 21
+  count: 120128
+}
+int_values {
+  value: 22
+  count: 114539
+}
+int_values {
+  value: 23
+  count: 102752
+}
+int_values {
+  value: 24
+  count: 92946
+}
+int_values {
+  value: 25
+  count: 80258
+}
+int_values {
+  value: 26
+  count: 69815
+}
+int_values {
+  value: 27
+  count: 57976
+}
+int_values {
+  value: 28
+  count: 48323
+}
+int_values {
+  value: 29
+  count: 38638
+}
+int_values {
+  value: 30
+  count: 34600
+}
+int_values {
+  value: 31
+  count: 25227
+}
+int_values {
+  value: 32
+  count: 21309
+}
+int_values {
+  value: 33
+  count: 16503
+}
+int_values {
+  value: 34
+  count: 14057
+}
+int_values {
+  value: 35
+  count: 10824
+}
+int_values {
+  value: 36
+  count: 9339
+}
+int_values {
+  value: 37
+  count: 6397
+}
+int_values {
+  value: 38
+  count: 4832
+}
+int_values {
+  value: 39
+  count: 2879
+}
+int_values {
+  value: 40
+  count: 2249
+}
+int_values {
+  value: 41
+  count: 1023
+}
+int_values {
+  value: 42
+  count: 779
+}
+int_values {
+  value: 43
+  count: 363
+}
+int_values {
+  value: 44
+  count: 306
+}
+int_values {
+  value: 45
+  count: 82
+}
+int_values {
+  value: 46
+  count: 120
+}
+int_values {
+  value: 47
+  count: 6
+}
+int_values {
+  value: 48
+  count: 8
+}

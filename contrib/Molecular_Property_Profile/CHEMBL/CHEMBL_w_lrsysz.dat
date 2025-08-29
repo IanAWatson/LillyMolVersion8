@@ -1,0 +1,92 @@
+description {
+  feature_name: "w_lrsysz"
+  description: "Rings in largest ring system"
+  plot_title: "Rings in largest ring system"
+  line_color: "blue"
+  source: "chembl"
+}
+maxval: 13.0
+mean: 1.7471929
+median: 2.0
+quantile {
+  quantile: 0.01
+}
+quantile {
+  quantile: 0.05
+  value: 1.0
+}
+quantile {
+  quantile: 0.1
+  value: 1.0
+}
+quantile {
+  quantile: 0.5
+  value: 2.0
+}
+quantile {
+  quantile: 0.9
+  value: 3.0
+}
+quantile {
+  quantile: 0.95
+  value: 3.0
+}
+quantile {
+  quantile: 0.99
+  value: 5.0
+}
+int_values {
+  count: 19402
+}
+int_values {
+  value: 1
+  count: 816826
+}
+int_values {
+  value: 2
+  count: 751139
+}
+int_values {
+  value: 3
+  count: 173406
+}
+int_values {
+  value: 4
+  count: 58215
+}
+int_values {
+  value: 5
+  count: 21329
+}
+int_values {
+  value: 6
+  count: 5301
+}
+int_values {
+  value: 7
+  count: 1787
+}
+int_values {
+  value: 8
+  count: 427
+}
+int_values {
+  value: 9
+  count: 99
+}
+int_values {
+  value: 10
+  count: 25
+}
+int_values {
+  value: 11
+  count: 67
+}
+int_values {
+  value: 12
+  count: 11
+}
+int_values {
+  value: 13
+  count: 27
+}

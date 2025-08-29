@@ -1,0 +1,7 @@
+(0 Query
+  (A I Version 2)
+  (A C Comment "anthra_ketone")
+  (A I min_nrings 3)
+  (A I min_aromatic_ring_count 2)
+  (A C smarts " [O,N,S;D1]=[/IWfss>2CD3Rr5]1c2caaac2[C,S]c3aaaac13")
+)

@@ -1,0 +1,60 @@
+description {
+  feature_name: "w_bbr2"
+  description: "Two bonds (one atom) between two rings"
+  plot_title: "Two bonds (one atom) between two rings"
+  line_color: "blue"
+  source: "chembl"
+}
+maxval: 6.0
+mean: 0.371175
+quantile {
+  quantile: 0.01
+}
+quantile {
+  quantile: 0.05
+}
+quantile {
+  quantile: 0.1
+}
+quantile {
+  quantile: 0.5
+}
+quantile {
+  quantile: 0.9
+  value: 1.0
+}
+quantile {
+  quantile: 0.95
+  value: 2.0
+}
+quantile {
+  quantile: 0.99
+  value: 2.0
+}
+int_values {
+  count: 1267507
+}
+int_values {
+  value: 1
+  count: 483615
+}
+int_values {
+  value: 2
+  count: 89282
+}
+int_values {
+  value: 3
+  count: 6873
+}
+int_values {
+  value: 4
+  count: 767
+}
+int_values {
+  value: 5
+  count: 14
+}
+int_values {
+  value: 6
+  count: 3
+}

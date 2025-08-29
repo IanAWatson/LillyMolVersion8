@@ -1,0 +1,16 @@
+**/__pycache__
+**/.idea
+*_pb.rb
+*.pyc
+lib
+include
+.gdb_history
+.venv
+.vscode
+
+./src/WORKSPACE
+
+## vs code workspace 
+./LillyMolPrivate.code-workspace
+*ruby-version
+lib64

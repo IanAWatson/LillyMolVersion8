@@ -1,0 +1,4 @@
+{
+    "name": "case_1",
+    "args": ["-l -v -S unique -D duplicate #{indir}/input.smi"]
+}

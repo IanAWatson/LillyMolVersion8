@@ -1,0 +1,143 @@
+description {
+  feature_name: "w_rmyno"
+  description: "Number of Oxygen atoms"
+  plot_title: "Number of Oxygen atoms"
+  line_color: "blue"
+  source: "chembl"
+}
+maxval: 27.0
+mean: 3.0132148
+median: 3.0
+quantile {
+  quantile: 0.01
+}
+quantile {
+  quantile: 0.05
+}
+quantile {
+  quantile: 0.1
+  value: 1.0
+}
+quantile {
+  quantile: 0.5
+  value: 3.0
+}
+quantile {
+  quantile: 0.9
+  value: 6.0
+}
+quantile {
+  quantile: 0.95
+  value: 7.0
+}
+quantile {
+  quantile: 0.99
+  value: 10.0
+}
+int_values {
+  count: 133099
+}
+int_values {
+  value: 1
+  count: 294417
+}
+int_values {
+  value: 2
+  count: 410068
+}
+int_values {
+  value: 3
+  count: 374063
+}
+int_values {
+  value: 4
+  count: 281100
+}
+int_values {
+  value: 5
+  count: 165393
+}
+int_values {
+  value: 6
+  count: 91107
+}
+int_values {
+  value: 7
+  count: 42962
+}
+int_values {
+  value: 8
+  count: 23151
+}
+int_values {
+  value: 9
+  count: 12095
+}
+int_values {
+  value: 10
+  count: 8009
+}
+int_values {
+  value: 11
+  count: 4562
+}
+int_values {
+  value: 12
+  count: 3316
+}
+int_values {
+  value: 13
+  count: 1755
+}
+int_values {
+  value: 14
+  count: 1174
+}
+int_values {
+  value: 15
+  count: 675
+}
+int_values {
+  value: 16
+  count: 460
+}
+int_values {
+  value: 17
+  count: 243
+}
+int_values {
+  value: 18
+  count: 160
+}
+int_values {
+  value: 19
+  count: 77
+}
+int_values {
+  value: 20
+  count: 62
+}
+int_values {
+  value: 21
+  count: 40
+}
+int_values {
+  value: 22
+  count: 25
+}
+int_values {
+  value: 23
+  count: 24
+}
+int_values {
+  value: 24
+  count: 13
+}
+int_values {
+  value: 26
+  count: 6
+}
+int_values {
+  value: 27
+  count: 5
+}

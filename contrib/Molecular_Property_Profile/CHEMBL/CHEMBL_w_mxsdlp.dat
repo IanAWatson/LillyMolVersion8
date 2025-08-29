@@ -1,0 +1,105 @@
+description {
+  feature_name: "w_mxsdlp"
+  description: "Maximum shortest distance to longest path"
+  plot_title: "Maximum shortest distance to longest path"
+  line_color: "blue"
+  source: "chembl"
+}
+maxval: 16.0
+mean: 2.8092568
+median: 2.0
+quantile {
+  quantile: 0.01
+  value: 1.0
+}
+quantile {
+  quantile: 0.05
+  value: 1.0
+}
+quantile {
+  quantile: 0.1
+  value: 1.0
+}
+quantile {
+  quantile: 0.5
+  value: 2.0
+}
+quantile {
+  quantile: 0.9
+  value: 5.0
+}
+quantile {
+  quantile: 0.95
+  value: 6.0
+}
+quantile {
+  quantile: 0.99
+  value: 7.0
+}
+int_values {
+  count: 787
+}
+int_values {
+  value: 1
+  count: 266847
+}
+int_values {
+  value: 2
+  count: 714348
+}
+int_values {
+  value: 3
+  count: 347912
+}
+int_values {
+  value: 4
+  count: 273738
+}
+int_values {
+  value: 5
+  count: 144873
+}
+int_values {
+  value: 6
+  count: 72889
+}
+int_values {
+  value: 7
+  count: 19843
+}
+int_values {
+  value: 8
+  count: 5181
+}
+int_values {
+  value: 9
+  count: 1277
+}
+int_values {
+  value: 10
+  count: 238
+}
+int_values {
+  value: 11
+  count: 63
+}
+int_values {
+  value: 12
+  count: 32
+}
+int_values {
+  value: 13
+  count: 18
+}
+int_values {
+  value: 14
+  count: 11
+}
+int_values {
+  value: 15
+  count: 3
+}
+int_values {
+  value: 16
+  count: 1
+}

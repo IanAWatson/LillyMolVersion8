@@ -1,0 +1,200 @@
+description {
+  feature_name: "w_maxdrng"
+  description: "Max distance between any two rings"
+  plot_title: "Max distance between any two rings"
+  line_color: "blue"
+  source: "chembl"
+}
+maxval: 41.0
+mean: 11.486519
+median: 12.0
+quantile {
+  quantile: 0.01
+}
+quantile {
+  quantile: 0.05
+  value: 3.0
+}
+quantile {
+  quantile: 0.1
+  value: 6.0
+}
+quantile {
+  quantile: 0.5
+  value: 12.0
+}
+quantile {
+  quantile: 0.9
+  value: 17.0
+}
+quantile {
+  quantile: 0.95
+  value: 19.0
+}
+quantile {
+  quantile: 0.99
+  value: 22.0
+}
+int_values {
+  count: 19402
+}
+int_values {
+  value: 1
+  count: 1065
+}
+int_values {
+  value: 2
+  count: 17165
+}
+int_values {
+  value: 3
+  count: 69561
+}
+int_values {
+  value: 4
+  count: 26454
+}
+int_values {
+  value: 5
+  count: 35758
+}
+int_values {
+  value: 6
+  count: 47688
+}
+int_values {
+  value: 7
+  count: 79182
+}
+int_values {
+  value: 8
+  count: 120464
+}
+int_values {
+  value: 9
+  count: 160191
+}
+int_values {
+  value: 10
+  count: 165150
+}
+int_values {
+  value: 11
+  count: 177053
+}
+int_values {
+  value: 12
+  count: 179740
+}
+int_values {
+  value: 13
+  count: 164969
+}
+int_values {
+  value: 14
+  count: 149468
+}
+int_values {
+  value: 15
+  count: 119448
+}
+int_values {
+  value: 16
+  count: 98439
+}
+int_values {
+  value: 17
+  count: 71040
+}
+int_values {
+  value: 18
+  count: 50175
+}
+int_values {
+  value: 19
+  count: 35131
+}
+int_values {
+  value: 20
+  count: 22410
+}
+int_values {
+  value: 21
+  count: 14382
+}
+int_values {
+  value: 22
+  count: 8253
+}
+int_values {
+  value: 23
+  count: 5731
+}
+int_values {
+  value: 24
+  count: 3433
+}
+int_values {
+  value: 25
+  count: 2245
+}
+int_values {
+  value: 26
+  count: 1517
+}
+int_values {
+  value: 27
+  count: 973
+}
+int_values {
+  value: 28
+  count: 422
+}
+int_values {
+  value: 29
+  count: 444
+}
+int_values {
+  value: 30
+  count: 164
+}
+int_values {
+  value: 31
+  count: 252
+}
+int_values {
+  value: 32
+  count: 70
+}
+int_values {
+  value: 33
+  count: 116
+}
+int_values {
+  value: 34
+  count: 23
+}
+int_values {
+  value: 35
+  count: 55
+}
+int_values {
+  value: 36
+  count: 6
+}
+int_values {
+  value: 37
+  count: 6
+}
+int_values {
+  value: 38
+  count: 4
+}
+int_values {
+  value: 39
+  count: 8
+}
+int_values {
+  value: 41
+  count: 4
+}

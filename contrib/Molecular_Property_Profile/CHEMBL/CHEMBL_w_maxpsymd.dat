@@ -1,0 +1,129 @@
+description {
+  feature_name: "w_maxpsymd"
+  description: "Max distance between atoms in partial symmetry relations"
+  plot_title: "Max distance between atoms in partial symmetry relations"
+  line_color: "blue"
+  source: "chembl"
+}
+maxval: 22.0
+mean: 3.94345
+median: 4.0
+quantile {
+  quantile: 0.01
+  value: 2.0
+}
+quantile {
+  quantile: 0.05
+  value: 2.0
+}
+quantile {
+  quantile: 0.1
+  value: 3.0
+}
+quantile {
+  quantile: 0.5
+  value: 4.0
+}
+quantile {
+  quantile: 0.9
+  value: 6.0
+}
+quantile {
+  quantile: 0.95
+  value: 6.0
+}
+quantile {
+  quantile: 0.99
+  value: 8.0
+}
+int_values {
+  count: 208
+}
+int_values {
+  value: 1
+  count: 3226
+}
+int_values {
+  value: 2
+  count: 148757
+}
+int_values {
+  value: 3
+  count: 605927
+}
+int_values {
+  value: 4
+  count: 605751
+}
+int_values {
+  value: 5
+  count: 292142
+}
+int_values {
+  value: 6
+  count: 116519
+}
+int_values {
+  value: 7
+  count: 44338
+}
+int_values {
+  value: 8
+  count: 18795
+}
+int_values {
+  value: 9
+  count: 6596
+}
+int_values {
+  value: 10
+  count: 2500
+}
+int_values {
+  value: 11
+  count: 1319
+}
+int_values {
+  value: 12
+  count: 730
+}
+int_values {
+  value: 13
+  count: 440
+}
+int_values {
+  value: 14
+  count: 426
+}
+int_values {
+  value: 15
+  count: 156
+}
+int_values {
+  value: 16
+  count: 96
+}
+int_values {
+  value: 17
+  count: 52
+}
+int_values {
+  value: 18
+  count: 33
+}
+int_values {
+  value: 19
+  count: 24
+}
+int_values {
+  value: 20
+  count: 17
+}
+int_values {
+  value: 21
+  count: 4
+}
+int_values {
+  value: 22
+  count: 5
+}
