@@ -61,8 +61,9 @@ Smiles files to not have header records.
 All tokens after the smiles are part of the molecule name.
 ```
 C methane consists of           a Carbon atom
-CC methane has two.
+CC ethane has two.
 ```
+
 is a Methane molecule whose name consists of 6 words, and an Ethane whose
 name consists of 3 words.
 Note that spaces in the name are NOT compressed, so the name of Methane
@@ -85,6 +86,7 @@ id1 1 2 3
 id2 4 5 6
 id3 7 8 9
 ```
+
 which are space delimited and with a header record. Use tcount to check whether
 or not a file is tabular.
 
@@ -93,8 +95,10 @@ or not a file is tabular.
 When encountering a new set of molecules, the first task is often to transfer from
 a format like sdf. For that fileconv can be used.
 ```
-fileconv -i SDFID:cat_num -f lod -E autocreate -e -O def -I 0 -V -g all -c 6 -C 50 -v external.sdf
+fileconv -i SDFID:cat_num -f lod -E autocreate -e -O def -I 0 -V \
+        -g all -c 6 -C 50 -v external.sdf
 ```
+
 this will create 'external.smi' with the results of the conversion. We specified
 that the identifier we care about is the sdf tag 'cat_num'. 
 
@@ -113,14 +117,6 @@ We apply [chemical_standardisation](/docs/Molecule_Lib/chemical_standardisation.
 
 Discard molecules with fewer than 6 or more than 50 atoms. Note that `-g all` will remove
 any explicit Hydrogen atoms, so the atom count cutoffs apply to heavy atom counts.
-
-If you have a large number of molecules, it can be helpful to use `fileconv_parallel.sh`
-but in this case you must specify the name of the output file
-```
-fileconv_parallel.sh <same as above> -thr 16 -S external external.sdf
-```
-will run 16 individual fileconv tasks on your computer - make sure you actually
-have 16 cores!
 
 ## Molecular Properties
 In order to understand what is in a collection of new molecules, generating
@@ -149,31 +145,40 @@ Generate fingerprints
 ```
 gfp_make.sh external.smi > external.gfp
 ```
+
 The tool `gfp_lnearneighbours` is used to compare two sets of fingerprints.
 Indeed it can be used to compre two large collections, but it will take
 forever. In this case split up the external file into chunks of (say)
 5000 fingerprints
+
 ```
 iwsplit -n 5000 -tdt -suffix gfp external.gfp
 ```
+
 which will generate a bunch of `iwsplit*.gfp` sharded files containing
 everything from 'external.gfp`. At this stage some kind of parallel
 processing is needed. Inside Lilly it is common to use the SGE
 cluster for this task. That might look like (assuming 237 splits formed)
+
 ```
 dopattern.sh -cluster -o 237 'gfp_lnearneighbours -n 1 -p iwsplit%.gfp \
                 /path/to/corporate/all.gfp.gz > iwsplit%.nn'
 ```
+
 which will generate a bunch of iwsplit*.nn files, each one containing
 the nearest neighbours from a portion of external.gfp. These files
 can be combined
+
 ```
 nplotnn -H histogram.txt -v iwsplit*.nn > all.nn
 ```
+
 That file can be sorted
+
 ```
 tdt_sort -T DIST all.nn > all.sorted.nn
 ```
+
 so the fingerprints with closest neighbours are at the top of
 the file.
 
@@ -193,6 +198,7 @@ The first thing to check is for duplicate structures.
 ```
 unique_molecules -S unique -c -z -l -v -t I=Cl -t Br=Cl external.smi
 ```
+
 We are not interested in chiral variants, chirality and cis-trans bonding is discarded, -c -z.
 Counterions are discarded (if not already happened) with the -l option. We don't
 really consider the Iodo and Bromo variants of a Chloro group to be "different
@@ -208,10 +214,13 @@ First generate fingerprints
 ```
 gfp_make.sh external.smi > external.gfp
 ```
+
 then run spread with as many cores as you have available, but no more than 16.
+
 ```
 gfp_spread_standard -h 8 external.gfp > external.spr
 ```
+
 and then plot the trajectory of distances [gfp_spread](/docs/GFP/gfp_spread.md).
 
 ### Unique Ring Systems
@@ -221,6 +230,7 @@ of molecules
 ```
 smi2rings_bdb ... -d /path/to/corporate/rings.bdb -v external.smi > rings.smi
 ```
+
 see [smi2rings_bdb](/docs/Molecule_Tools/smi2rings.md) since this will
 require concordance with how the database is built and how it is queried.
 
@@ -326,8 +336,8 @@ tsubstructure -q PROTO:/path/to/aniline_halogen.qry -m aniline_halogen external.
 ```
 
 or use `tsubstructure_parallel.sh` if the file is large. This might match molecules like
-![CHEMBL27011](Images/CHEMBL27011.png)
-![CHEMBL81588](Images/CHEMBL81588.png)
+![CHEMBL27011](docs/Images/CHEMBL27011.png)
+![CHEMBL81588](docs/Images/CHEMBL81588.png)
 
 And of course if a query can be specified as smarts, that can be used with the `-s` option.
 
@@ -337,8 +347,9 @@ than five bonds away '...{>5}' from an acid 'C(=O)-[OH]'
 ```
 tsubstructure -j 1 -s '[NH2]-[CX4T1]...{>5}C(=O)-[OH]' -m matches external.smi
 ```
-which might match molecules line
-![CHEMBL2286788](CHEMBL2286788.png)
+which might match molecules like
+
+![CHEMBL2286788](docs/Images/CHEMBL2286788.png)
 
 Because we use the -j option to tsubstructure, the matched atoms are given isotopic
 labels. Somewhat confusingly matched atom 0, the Nitrogen atom, is assigned isotope
@@ -354,10 +365,21 @@ tsubstructure -s '[ND1H2]-[CX4]||[ND2H]([CX4])[CX4]||[ND1H2]-a||[ND2H]([CX4])-a|
 The OR type queries in LillyMol, || are evaluated left to right. When one matches
 matching stops, and the matched atoms will be returned and labelled with an
 isotope. This might match molecules like
-![CHEMBL4101550](Images/CHEMBL4101550.png
+
+![CHEMBL4101550](docs/Images/CHEMBL4101550.png)
+
 This match is interesting because it shows how the precedence matching has worked.
-The primary amine is a match, and that was detected first
-![CHEMBL70445](Images/CHEMBL70445.png).
+The primary amine is a match, and so no further matching was attempted - the secondary
+amind is not marked as a matched atom.
+![CHEMBL70445](docs/Images/CHEMBL70445.png).
+
+But note that if we enter the query as an AND query for primary and secondary amine,
+```
+tsubstructure -s '[ND1H2]-[CX4]&&[ND2H]([CX4])[CX4]' ...
+```
+then both components of the query must be evaluated, and the last component evaluated is the
+secondary amine, so the marked atoms are now
+![CHEMBL70445](docs/Images/CHEMBL70445.II.png)
 
 ## Reactions
 When performing reactions, what is usually the hardest part is selecting the
@@ -559,5 +581,5 @@ So given the smiles
 ClC(CCl)CO CHEMBL1538584
 ```
 it will generate
-![CHEMBL1538585](Images/CHEMBL1538585.png)
+![CHEMBL1538585](docs/Images/CHEMBL1538585.png)
 A number of other properties can be applied as isotopic labels.
